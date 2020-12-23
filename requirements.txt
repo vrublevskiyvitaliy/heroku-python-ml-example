@@ -1,3 +1,4 @@
+setuptools==45
 numpy==1.14.3
 scipy==1.1.0
 pandas==0.23.0
