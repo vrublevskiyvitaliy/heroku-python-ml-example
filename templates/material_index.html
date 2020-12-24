@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NLP Natural Language Processing</title>
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+
+
+</head>
+
+<body>
+
+<!-- Static navbar -->
+<div class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Webpage Summarize</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+
+<!-- +++++ Projects Section +++++ -->
+
+
+<button class="mdc-button foo-button">
+    <div class="mdc-button__ripple"></div>
+    <span class="mdc-button__label">Button</span>
+</button>
+
+
+<section class="header">
+    <svg class="shrine-logo" ...>
+
+    </svg>
+    <h1>Paraphrase Identification</h1>
+</section>
+
+<form action="home.html">
+
+
+</form>
+
+<div class="mdc-tab-bar" role="tablist">
+    <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+            <div class="mdc-tab-scroller__scroll-content">
+                <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                      <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">Favorites</span>
+                      </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                      </span>
+                    <span class="mdc-tab__ripple"></span>
+                </button>
+                <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="1">
+                  <span class="mdc-tab__content">
+                    <span class="mdc-tab__text-label">Favorites 2</span>
+                  </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                  </span>
+                    <span class="mdc-tab__ripple"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="tab-content">
+    Favorites 11 text
+
+</div>
+
+<div class="tab-content hidden">
+    Favorites 2 text
+</div>
+
+
+<div id="app"></div>
+<div id="like_button_container"></div>
+
+<div class="container pt">
+    <div class="row mt">
+        <div class="col-lg-6 col-lg-offset-3 centered">
+            <h3>Summarize any webpage you wish</h3>
+            <h5>Hey... with a few exceptions</h5>
+            <hr>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout.</p>
+        </div>
+    </div>
+    <div class="row mt">
+        <div class="col-lg-8 col-lg-offset-2">
+            <form role="form">
+                <div class="form-group">
+                    <input type="url" class="form-control" id="inputUrl"
+                           placeholder="https://medium.com/the-mission/the-5-minute-routine-that-will-10x-your-productivity-1d148c360ea8">
+                </div>
+                <input type="button" id="btnSubmit" value="SUBMIT" class="btn btn-success"/>
+            </form>
+            <hr>
+            <div id="summary">
+                <!-- +++++ Summary output will be displayed here +++++ -->
+            </div>
+        </div>
+    </div><!-- /row -->
+</div><!-- /container -->
+
+
+<!-- +++++ Footer Section +++++ -->
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3">
+                <h4>On Internet</h4>
+                <p><a href="https://github.com/akashp1712/summarize_webpage">Project on Github</a><br/></p>
+            </div><!-- /col-lg-3 -->
+
+            <div class="col-lg-3">
+                <h4>Contact</h4>
+                <p><a href="https://medium.com/@akashp1712">Medium</a><br/></p>
+                <p><a href="https://www.linkedin.com/in/akash-panchal-2222749a/">LinkedIn</a><br/></p>
+            </div><!-- /col-lg-4 -->
+
+            <div class="col-lg-6">
+                <h4>About the project</h4>
+                <p>This is an educational project that demonstrate the usage of the <a href="https://www.nltk.org"
+                                                                                       target="_blank">NLTK</a> (for
+                    NLP)
+                    and <a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank">Flask</a> (for
+                    webservice).</p>
+            </div><!-- /col-lg-4 -->
+
+        </div>
+    </div>
+</div>
+
+<div id="copyrights">
+    <div class="container">
+        <p>
+            &copy; Copyrights <strong>Stanley</strong>. All Rights Reserved
+        </p>
+        <div class="credits">
+            <!--
+              You are NOT allowed to delete the credit link to TemplateMag with free version.
+              You can delete the credit link only if you bought the pro version.
+              Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/stanley-bootstrap-freelancer-template/
+              Licensing information: https://templatemag.com/license/
+            -->
+            Created with Stanley template by <a href="https://templatemag.com/">TemplateMag</a>
+        </div>
+    </div>
+</div>
+<!-- / copyrights -->
+
+
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
+<style>
+.hidden {
+  display: none;
+}
+
+</style>
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+<script src="{{ url_for('static', filename = 'assets/js/main.js') }}"></script>
+
+
+</body>
+
+</html>

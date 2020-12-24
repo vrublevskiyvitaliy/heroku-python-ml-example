@@ -51,6 +51,12 @@ def home():
     return render_template('home.html')
 
 
+@app.route('/test')
+def test():
+    return render_template('material_index.html')
+
+
+
 # @app.route('/predict', methods=['POST'])
 # def predict():
 #     if request.method == 'POST':
@@ -65,4 +71,4 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=PORT)
+    app.run(host='0.0.0.0', port=PORT, debug=True)
