@@ -56,6 +56,11 @@ def test():
     return render_template('material_index.html')
 
 
+@app.route('/test2')
+def test2():
+    return render_template('m_index.html')
+
+
 
 # @app.route('/predict', methods=['POST'])
 # def predict():

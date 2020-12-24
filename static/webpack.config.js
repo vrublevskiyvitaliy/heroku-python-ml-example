@@ -21,20 +21,20 @@ function getStyleUse(bundleFilename) {
 
 module.exports = [
   {
-    entry: './static/material/main.scss',
+    entry: './material/main.scss',
     output: {
       // This is necessary for webpack to compile, but we never reference this js file.
-      filename: './static/material/main.js',
+      filename: 'not_used_main.js',
     },
     module: {
       rules: [{
         test: /main.scss$/,
-        use: getStyleUse('bundle-main.css')
+        use: getStyleUse('./bundle-main.css')
       }]
     },
   },
   {
-    entry: "./static/material/main.js",
+    entry: "./material/main.js",
     output: {
       filename: "bundle-main.js"
     },
