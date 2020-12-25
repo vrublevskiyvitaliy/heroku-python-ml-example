@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "start": "webpack-dev-server --progress",
+    "start": "webpack-dev-server --progress --output-path /material/build",
     "build": "webpack-dev-server -p"
   },
   "license": "MIT",
@@ -18,10 +18,15 @@
     "file-loader": "^1.1.11",
     "sass-loader": "^7.1.0",
     "webpack": "^3.12.0",
-    "webpack-cli": "^4.2.0",
+    "webpack-cli": "^4.3.0",
     "webpack-dev-server": "^2.4.3"
   },
   "dependencies": {
-    "@material/tab-bar": "^8.0.0"
+    "@material/shape": "^8.0.0",
+    "@material/tab": "^8.0.0",
+    "@material/tab-bar": "^8.0.0",
+    "@material/tab-indicator": "^8.0.0",
+    "@material/tab-scroller": "^8.0.0",
+    "@material/textfield": "^8.0.0"
   }
 }

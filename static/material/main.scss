@@ -1,12 +1,39 @@
+
+
 @import "./common";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+@import "@material/textfield/mdc-text-field";
+// @import "@material/button/mdc-button";
 
 .header {
   text-align: center;
 }
 
-.shrine-logo {
-  width: 150px;
-  height: 150px;
-  padding-top: 80px;
-  fill: currentColor;
+.my-center {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.sentence-label {
+  text-align: center;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.js-content-hidden {
+  display: none;
+}
+
+.button-container {
+  width: 300px;
+  margin: auto;
+}
+
+.button-container button {
+  margin: 3px;
 }

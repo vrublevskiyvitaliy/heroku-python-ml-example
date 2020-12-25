@@ -29,14 +29,14 @@ module.exports = [
     module: {
       rules: [{
         test: /main.scss$/,
-        use: getStyleUse('./bundle-main.css')
+        use: getStyleUse('./material/build/bundle-main.css')
       }]
     },
   },
   {
     entry: "./material/main.js",
     output: {
-      filename: "bundle-main.js"
+      filename: "material/build/bundle-main.js"
     },
     module: {
       loaders: [{
