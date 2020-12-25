@@ -1,18 +1,94 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shrine (MDC Web Example App)</title>
-  <link rel="shortcut icon" href="https://material.io/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-  <link rel="stylesheet" href="{{ url_for('static', filename = 'bundle-main.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shrine (MDC Web Example App)</title>
+    <link rel="shortcut icon" href="https://material.io/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'material/build/bundle-main.css') }}">
 </head>
 <body class="shrine-login">
-  <section class="header">
+<section class="header">
     <h1>PARAPHRASE IDENTIFICATION</h1>
-  </section>
-  <script src="{{ url_for('static', filename = 'bundle-main.js') }}"></script>
+</section>
+
+<!--Tabs list-->
+<div>
+    <div class="mdc-tab-bar" role="tablist">
+        <div class="mdc-tab-scroller">
+            <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                    <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                          <span class="mdc-tab__content">
+                            <span class="mdc-tab__icon material-icons" aria-hidden="true">text_format</span>
+                            <span class="mdc-tab__text-label">Sentences similarity</span>
+                          </span>
+                        <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                          </span>
+                        <span class="mdc-tab__ripple"></span>
+                    </button>
+                    <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="1"
+                    ">
+                    <span class="mdc-tab__content">
+                            <span class="mdc-tab__icon material-icons" aria-hidden="true">attach_file</span>
+                            <span class="mdc-tab__text-label">Text files similarity</span>
+                          </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                          </span>
+                    <span class="mdc-tab__ripple"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--Tab content for 2 sentences-->
+<div class="js-tab-content row my-center">
+    <div class="column">
+        <span class="sentence-label">First sentence</span>
+        <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea first-sentence">
+            <span class="mdc-text-field__ripple"></span>
+
+            <span class="mdc-text-field__resizer">
+            <textarea class="mdc-text-field__input" rows="4" cols="60" aria-label="Label"></textarea>
+          </span>
+            <span class="mdc-line-ripple"></span>
+        </label>
+    </div>
+    <div class="column">
+        <span class="sentence-label">Second sentence</span>
+        <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea second-sentence">
+            <span class="mdc-text-field__ripple"></span>
+
+            <span class="mdc-text-field__resizer">
+            <textarea class="mdc-text-field__input" rows="4" cols="60" aria-label="Label"></textarea>
+          </span>
+            <span class="mdc-line-ripple"></span>
+        </label>
+    </div>
+
+    <div class="button-container">
+        <button class="mdc-button mdc-button--raised compare-sentences">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">
+              Compare
+            </span>
+        </button>
+    </div>
+</div>
+
+<!--Tab content for 2 files-->
+<div class="js-tab-content js-content-hidden">
+    Second
+</div>
+
+
+<script src="{{ url_for('static', filename = 'material/build/bundle-main.js') }}"></script>
 </body>
 </html>
