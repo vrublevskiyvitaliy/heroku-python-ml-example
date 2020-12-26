@@ -22,6 +22,7 @@
     "webpack-dev-server": "^2.4.3"
   },
   "dependencies": {
+    "@material/button": "^8.0.0",
     "@material/shape": "^8.0.0",
     "@material/tab": "^8.0.0",
     "@material/tab-bar": "^8.0.0",

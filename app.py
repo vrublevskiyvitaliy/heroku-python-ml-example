@@ -6,6 +6,7 @@ import logging
 import os
 
 from sklearn.externals import joblib
+from werkzeug.utils import secure_filename
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 MODEL = os.path.join(APP_ROOT, 'classifier.pkl')
@@ -59,6 +60,25 @@ def test():
 @app.route('/test2')
 def test2():
     return render_template('m_index.html')
+
+
+@app.route('/compare-sentences')
+def compare_sentences():
+    first_sentence = request.args.get('first-sentence', '')
+    second_sentence = request.args.get('second-sentence', '')
+    similarity = 89
+    return render_template('compare-sentences.html', first_sentence=first_sentence,
+                           second_sentence=second_sentence, similarity=similarity)
+
+
+@app.route('/compare-files')
+def compare_files():
+    first_sentence = request.form.get('first-sentence', '')
+    second_sentence = request.args.get('second-sentence', '')
+    similarity = 89
+    return render_template('compare-sentences.html', first_sentence=first_sentence,
+                           second_sentence=second_sentence, similarity=similarity)
+
 
 
 

@@ -50,13 +50,14 @@
 </div>
 <!--Tab content for 2 sentences-->
 <div class="js-tab-content row my-center">
+    <form action="/compare-sentences" method="get">
     <div class="column">
         <span class="sentence-label">First sentence</span>
         <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea first-sentence">
             <span class="mdc-text-field__ripple"></span>
 
             <span class="mdc-text-field__resizer">
-            <textarea class="mdc-text-field__input" rows="4" cols="60" aria-label="Label"></textarea>
+            <textarea class="mdc-text-field__input" rows="4" cols="60" aria-label="Label" name="first-sentence"></textarea>
           </span>
             <span class="mdc-line-ripple"></span>
         </label>
@@ -67,25 +68,45 @@
             <span class="mdc-text-field__ripple"></span>
 
             <span class="mdc-text-field__resizer">
-            <textarea class="mdc-text-field__input" rows="4" cols="60" aria-label="Label"></textarea>
+            <textarea class="mdc-text-field__input" rows="4" cols="60" aria-label="Label" name="second-sentence"></textarea>
           </span>
             <span class="mdc-line-ripple"></span>
         </label>
     </div>
 
-    <div class="button-container">
-        <button class="mdc-button mdc-button--raised compare-sentences">
+    <div class="button-container pd-top20">
+        <button class="mdc-button mdc-button--raised compare-sentences" type="submit">
             <div class="mdc-button__ripple"></div>
             <span class="mdc-button__label">
               Compare
             </span>
         </button>
     </div>
+    </form>
 </div>
 
 <!--Tab content for 2 files-->
-<div class="js-tab-content js-content-hidden">
-    Second
+<div class="js-tab-content js-content-hidden row my-center">
+     <form action="/compare-files">
+        <div class="column">
+            <span class="sentence-label">First file</span>
+            <input class="mdc-button mdc-button--raised compare-sentences" accept=".txt" type="file" id="file1" name="file1" style="display: none;" required/>
+            <label class="mdc-button mdc-button--raised" for="file1">Select file</label>
+        </div>
+         <div class="column">
+            <span class="sentence-label">Second file</span>
+            <input class="mdc-button mdc-button--raised compare-sentences" accept=".txt" type="file" id="file2" name="file2" style="display: none;" required/>
+            <label class="mdc-button mdc-button--raised" for="file2">Select file</label>
+        </div>
+        <div class="button-container pd-top20">
+            <button class="mdc-button mdc-button--raised compare-sentences" type="submit">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">
+                Compare
+            </span>
+            </button>
+        </div>
+    </form>
 </div>
 
 
