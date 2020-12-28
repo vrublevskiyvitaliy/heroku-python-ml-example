@@ -4,8 +4,14 @@ gunicorn==19.9.0
 itsdangerous==0.24
 Jinja2==2.11.2
 MarkupSafe==1.1.1
-numpy==1.14.3
+numpy==1.19.4
 pandas==0.23.0
 scikit-learn==0.19.1
 scipy==1.1.0
 Werkzeug==0.16.1
+nltk==3.5
+spacy==2.3.2
+networkx==2.4
+
+
+# python -m spacy download en_core_web_md
