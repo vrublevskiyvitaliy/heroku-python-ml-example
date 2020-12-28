@@ -11,7 +11,6 @@ from sklearn.externals import joblib
 from werkzeug.utils import secure_filename
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
-MODEL = os.path.join(APP_ROOT, 'classifier.pkl')
 MODEL_V = os.path.join(APP_ROOT, 'finalized_model.sav')
 
 PORT = 5000
@@ -19,7 +18,6 @@ PORT = 5000
 app = Flask(__name__)
 logging.basicConfig(filename='movie_classifier.log', level=logging.DEBUG)
 
-model = joblib.load(MODEL)
 model_v = joblib.load(MODEL_V)
 
 label = {0: 'negative', 1: 'positive'}
@@ -29,9 +27,6 @@ label = {0: 'negative', 1: 'positive'}
 # def home():
 #     return 'It works.'
 
-
-def predict(model, text):
-    return label[model.predict([text])[0]]
 
 
 def predict_v(model_v, s1, s2):
@@ -43,25 +38,6 @@ def predict_v(model_v, s1, s2):
         'not_paraphrase_probability': probabilities[0][0],
         'paraphrase_probability': probabilities[0][1],
     }
-
-
-@app.route('/review', methods=['POST'])
-def extract():
-    """Return the movie review sentiment score.
-    
-    Returns a JSON object :
-    {
-         "sentiment": "positive"
-    }
-    """
-    if request.method == 'POST':
-        description = request.form.get('text', '')
-
-        result = {
-            'sentiment': predict(model, description)
-        }
-        # return json.dumps(result)
-        return render_template('result.html', prediction=result['sentiment'])
 
 
 @app.route('/')
@@ -96,18 +72,6 @@ def compare_files():
     return render_template('compare-sentences.html', first_sentence=first_sentence,
                            second_sentence=second_sentence, similarity=similarity)
 
-
-# @app.route('/predict', methods=['POST'])
-# def predict():
-#     if request.method == 'POST':
-#         message = request.form['message']
-#         data = [message]
-#         vect = pd.DataFrame(cv.transform(data).toarray())
-#         body_len = pd.DataFrame([len(data) - data.count(" ")])
-#         punct = pd.DataFrame([count_punct(data)])
-#         total_data = pd.concat([body_len, punct, vect], axis=1)
-#         my_prediction = clf.predict(total_data)
-#     return render_template('result.html', prediction=my_prediction)
 
 
 if __name__ == '__main__':

@@ -138,7 +138,7 @@ idf_model = TfIdf(DataGenerator.get_test_data())
 
 
 def get_spacy_module():
-    return spacy.load('en_core_web_md')
+    return spacy.load('en_core_web_sm')
     # return en_core_web_md.load()
 
 
