@@ -1,24 +1,16 @@
 # All imports and installs should be here
-import os
 import sys
-import random
 
 import pandas as pd
 import numpy as np
-from nltk import wordpunct_tokenize
-import operator
-import re, string
 import math
 import spacy
-import copy
 
-from nltk import Tree
+
 # Space module import
-import en_core_web_md
 # NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.
 import networkx as nx
 from networkx import __version__ as nxv
-import networkx.algorithms as networkx_algorithms
 
 # linear_sum_assignment Hungarian algorithm
 from scipy.optimize import linear_sum_assignment
@@ -146,7 +138,8 @@ idf_model = TfIdf(DataGenerator.get_test_data())
 
 
 def get_spacy_module():
-    return en_core_web_md.load()
+    return spacy.load('en_core_web_md')
+    # return en_core_web_md.load()
 
 
 nlp = get_spacy_module()
