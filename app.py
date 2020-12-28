@@ -13,26 +13,26 @@ MODEL_V = os.path.join(APP_ROOT, 'finalized_model.sav')
 PORT = 5000
 
 app = Flask(__name__)
-logging.basicConfig(filename='movie_classifier.log', level=logging.DEBUG)
+logging.basicConfig(filename='classifier.log', level=logging.DEBUG)
 
 model_v = joblib.load(MODEL_V)
 
 
 def predict_v(s1, s2):
-    # features = features_for_prediction(s1, s2)
-    # is_paraphrase = model_v.predict(features)[0] == 1
-    # probabilities = model_v._predict_proba_lr(features)
-    #
-    # return {
-    #     'is_paraphrase': is_paraphrase,
-    #     'not_paraphrase_probability': int(round(probabilities[0][0] * 100)),
-    #     'paraphrase_probability': int(round(probabilities[0][1] * 100)),
-    # }
+    features = features_for_prediction(s1, s2)
+    is_paraphrase = model_v.predict(features)[0] == 1
+    probabilities = model_v._predict_proba_lr(features)
+
     return {
-        'is_paraphrase': 0,
-        'not_paraphrase_probability': 0,
-        'paraphrase_probability': 0,
+        'is_paraphrase': is_paraphrase,
+        'not_paraphrase_probability': int(round(probabilities[0][0] * 100)),
+        'paraphrase_probability': int(round(probabilities[0][1] * 100)),
     }
+    # return {
+    #     'is_paraphrase': 0,
+    #     'not_paraphrase_probability': 0,
+    #     'paraphrase_probability': 0,
+    # }
 
 
 @app.route('/')

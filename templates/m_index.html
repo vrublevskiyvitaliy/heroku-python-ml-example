@@ -12,7 +12,7 @@
 </head>
 <body class="shrine-login">
 <section class="header">
-    <h1>PARAPHRASE IDENTIFICATION</h1>
+    <h1>Paraphrase Identification</h1>
 </section>
 
 <!--Tabs list-->
@@ -34,8 +34,8 @@
                     <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="1"
                     ">
                     <span class="mdc-tab__content">
-                            <span class="mdc-tab__icon material-icons" aria-hidden="true">attach_file</span>
-                            <span class="mdc-tab__text-label">Text files similarity</span>
+                            <span class="mdc-tab__icon material-icons" aria-hidden="true">help</span>
+                            <span class="mdc-tab__text-label">About the model</span>
                           </span>
                     <span class="mdc-tab-indicator mdc-tab-indicator--active">
                             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
@@ -51,62 +51,62 @@
 <!--Tab content for 2 sentences-->
 <div class="js-tab-content row my-center">
     <form action="/compare-sentences" method="get">
-    <div class="column">
-        <span class="sentence-label">First sentence</span>
-        <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea first-sentence">
-            <span class="mdc-text-field__ripple"></span>
+        <div class="column">
+            <span class="sentence-label">First sentence</span>
+            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea first-sentence">
+                <span class="mdc-text-field__ripple"></span>
 
-            <span class="mdc-text-field__resizer">
-            <textarea class="mdc-text-field__input" rows="4" cols="60" aria-label="Label" name="first-sentence"></textarea>
+                <span class="mdc-text-field__resizer">
+            <textarea class="mdc-text-field__input" rows="4" cols="60" aria-label="Label"
+                      name="first-sentence"></textarea>
           </span>
-            <span class="mdc-line-ripple"></span>
-        </label>
-    </div>
-    <div class="column">
-        <span class="sentence-label">Second sentence</span>
-        <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea second-sentence">
-            <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-line-ripple"></span>
+            </label>
+        </div>
+        <div class="column">
+            <span class="sentence-label">Second sentence</span>
+            <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea second-sentence">
+                <span class="mdc-text-field__ripple"></span>
 
-            <span class="mdc-text-field__resizer">
-            <textarea class="mdc-text-field__input" rows="4" cols="60" aria-label="Label" name="second-sentence"></textarea>
+                <span class="mdc-text-field__resizer">
+            <textarea class="mdc-text-field__input" rows="4" cols="60" aria-label="Label"
+                      name="second-sentence"></textarea>
           </span>
-            <span class="mdc-line-ripple"></span>
-        </label>
-    </div>
+                <span class="mdc-line-ripple"></span>
+            </label>
+        </div>
 
-    <div class="button-container pd-top20">
-        <button class="mdc-button mdc-button--raised compare-sentences" type="submit">
-            <div class="mdc-button__ripple"></div>
-            <span class="mdc-button__label">
+        <div class="button-container pd-top20">
+            <button class="mdc-button mdc-button--raised compare-sentences" type="submit">
+                <div class="mdc-button__ripple"></div>
+                <span class="mdc-button__label">
               Compare
             </span>
-        </button>
-    </div>
+            </button>
+        </div>
     </form>
 </div>
 
 <!--Tab content for 2 files-->
 <div class="js-tab-content js-content-hidden row my-center">
-     <form action="/compare-files">
-        <div class="column">
-            <span class="sentence-label">First file</span>
-            <input class="mdc-button mdc-button--raised compare-sentences" accept=".txt" type="file" id="file1" name="file1" style="display: none;" required/>
-            <label class="mdc-button mdc-button--raised" for="file1">Select file</label>
-        </div>
-         <div class="column">
-            <span class="sentence-label">Second file</span>
-            <input class="mdc-button mdc-button--raised compare-sentences" accept=".txt" type="file" id="file2" name="file2" style="display: none;" required/>
-            <label class="mdc-button mdc-button--raised" for="file2">Select file</label>
-        </div>
-        <div class="button-container pd-top20">
-            <button class="mdc-button mdc-button--raised compare-sentences" type="submit">
-            <div class="mdc-button__ripple"></div>
-            <span class="mdc-button__label">
-                Compare
-            </span>
-            </button>
-        </div>
-    </form>
+    <p>Vrublevskyi Vitalii and Oleksandr Marchenko</p>
+    <p>Faculty of Computer Science and Cybernetics</p>
+    <p>Taras Shevchenko National University of Kyiv</p>
+    <p>Kyiv, Ukraine </p>
+    <p>vitalii.vrublevskyi@gmail.com</p>
+
+    <span class="sentence-result">We created efficient and simple model for detecting paraphrase sentences in the English language. The dependency tree was chosen as the main structure to represent the relationships between words in a sentence. To represent the word semantics, we are using pre-trained general-purpose word embeddings. Based on these two key components, we designed a few features that can help to identify paraphrases.  </span>
+
+    <p>Features used:</p>
+    <div style="text-align: center;">
+        <p>Hungarian nodes match.</p>
+        <p>Graph edit distance based on Hungarian nodes match.</p>
+        <p>Dependency Tree Path Feature.</p>
+        <p>Dependency Tree Subgraph Feature.</p>
+        <p>Dependency Tree Subgraph Feature with Idf.</p>
+        <p>Syntactic N-Grams Overlap.</p>
+        <p>BLEU</p>
+    </div>
 </div>
 
 
