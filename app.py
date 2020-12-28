@@ -19,13 +19,19 @@ model_v = joblib.load(MODEL_V)
 
 
 def predict_v(s1, s2):
-    features = features_for_prediction(s1, s2)
-    is_paraphrase = model_v.predict(features)[0] == 1
-    probabilities = model_v._predict_proba_lr(features)
+    # features = features_for_prediction(s1, s2)
+    # is_paraphrase = model_v.predict(features)[0] == 1
+    # probabilities = model_v._predict_proba_lr(features)
+    #
+    # return {
+    #     'is_paraphrase': is_paraphrase,
+    #     'not_paraphrase_probability': int(round(probabilities[0][0] * 100)),
+    #     'paraphrase_probability': int(round(probabilities[0][1] * 100)),
+    # }
     return {
-        'is_paraphrase': is_paraphrase,
-        'not_paraphrase_probability': int(round(probabilities[0][0] * 100)),
-        'paraphrase_probability': int(round(probabilities[0][1] * 100)),
+        'is_paraphrase': 0,
+        'not_paraphrase_probability': 0,
+        'paraphrase_probability': 0,
     }
 
 

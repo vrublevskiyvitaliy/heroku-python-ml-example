@@ -1,5 +1,3 @@
-
-
 @import "./common";
 @import "@material/tab-bar/mdc-tab-bar";
 @import "@material/tab-scroller/mdc-tab-scroller";
@@ -15,6 +13,14 @@
 .my-center {
   text-align: center;
   padding-top: 20px;
+}
+
+.sentence-result {
+  text-align: center;
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 50%;
 }
 
 .sentence-label {

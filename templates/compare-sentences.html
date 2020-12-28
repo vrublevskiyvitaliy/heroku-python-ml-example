@@ -18,23 +18,23 @@
 
 <!--Tab content for 2 sentences-->
 <div class="row my-center">
-    <form action="/test2">
-        <div class="column">
-            <span class="sentence-label"><b>First sentence</b></span>
-            <span class="sentence-label">{{first_sentence}}</span>
+    <form action="/">
+        <div>
+            <span class="sentence-result"><b>First sentence</b></span>
+            <span class="sentence-result">{{first_sentence}}</span>
         </div>
-        <div class="column">
-            <span class="sentence-label"><b>Second sentence</b></span>
-            <span class="sentence-label">{{second_sentence}}</span>
+        <div>
+            <span class="sentence-result"><b>Second sentence</b></span>
+            <span class="sentence-result">{{second_sentence}}</span>
         </div>
-        <div class="column">
-            <span class="sentence-label"><b>Results</b></span>
+        <div>
+            <span class="sentence-result"><b>Results</b></span>
             {% if similarity.is_paraphrase %}
-            <span class="sentence-label">They are paraphrases.</span>
+            <span class="sentence-result">They are paraphrases.</span>
             {% else %}
-            <span class="sentence-label">They are not paraphrases.</span>
+            <span class="sentence-result">They are not paraphrases.</span>
             {% endif %}
-            <span class="sentence-label">Paraphrase probability {{  similarity.paraphrase_probability }} %.</span>
+            <span class="sentence-result">Paraphrase probability {{  similarity.paraphrase_probability }} %.</span>
         </div>
         <div class="button-container pd-top20">
             <button class="mdc-button mdc-button--raised compare-sentences" type="submit">
