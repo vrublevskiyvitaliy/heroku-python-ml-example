@@ -659,7 +659,7 @@ class MarchFeatureGenerator:
                         match = True
                 if match:
                     count += 1
-            d = count * 1. / len(s1_list)
+            d = count * 1. / len(s1_list) if len(s1_list) > 0 else 0
             return np.array([d])
 
         feature_2 = np.array([])
@@ -701,7 +701,7 @@ class MarchFeatureGenerator:
                 if match:
                     similarity_score += 1
 
-            similarity_score = (similarity_score * 1.) / len(f1)
+            similarity_score = (similarity_score * 1.) / len(f1) if len(f1) > 0 else 0
 
             return np.array([similarity_score])
 
@@ -738,7 +738,7 @@ class MarchFeatureGenerator:
                         match = True
                 if match:
                     count += 1
-            d = count * 1. / len(s1_list)
+            d = count * 1. / len(s1_list) if len(s1_list) > 0 else 0
             return np.array([d])
 
         feature_5 = np.array([])
